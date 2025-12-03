@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLT Digital × Semrush - AI Optimization Partnership Strategy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Cover Section */
+        .cover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+        
+        .cover::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -300px;
+            right: -300px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .cover::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -200px;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .logo-area {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .logo-divider {
+            font-size: 48px;
+            opacity: 0.6;
+        }
+        
+        .cover h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            z-index: 1;
+        }
+        
+        .cover .subtitle {
+            font-size: 28px;
+            opacity: 0.95;
+            margin-bottom: 60px;
+            font-weight: 300;
+            z-index: 1;
+        }
+        
+        .recording-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            padding: 24px 48px;
+            border-radius: 60px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .recording-btn:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cover .date {
+            margin-top: 60px;
+            font-size: 18px;
+            opacity: 0.85;
+            z-index: 1;
+        }
+        
+        /* Content Section */
+        .section {
+            background: white;
+            margin: 40px 20px;
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid #f093fb;
+        }
+        
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #764ba2;
+            margin: 48px 0 24px 0;
+        }
+        
+        h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #667eea;
+            margin: 32px 0 16px 0;
+        }
+        
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 16px 0;
+            color: #2d3748;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #f093fb15 0%, #667eea15 100%);
+            border-left: 5px solid #764ba2;
+            padding: 32px 40px;
+            margin: 32px 0;
+            border-radius: 12px;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            border-radius: 16px;
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 3px;
+            background: linear-gradient(135deg, #667eea, #f093fb);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 15px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            line-height: 1.5;
+        }
+        
+        /* ROI Hero */
+        .roi-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 60px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 60px 0;
+            box-shadow: 0 16px 64px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .roi-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .roi-label {
+            font-size: 24px;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+        
+        .roi-number {
+            font-size: 120px;
+            font-weight: 800;
+            margin: 32px 0;
+            line-height: 1;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        th {
+            padding: 24px 20px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+        }
+        
+        td {
+            padding: 24px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa !important;
+        }
+        
+        .table-highlight {
+            background: linear-gradient(135deg, #f093fb15 0%, #667eea15 100%) !important;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        /* Icon List */
+        .icon-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        
+        .icon-list li {
+            padding: 16px 0 16px 48px;
+            position: relative;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        
+        .icon-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        /* Comparison Cards */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 40px 0;
+        }
+        
+        .comparison-card {
+            padding: 40px;
+            border-radius: 16px;
+            border: 3px solid;
+        }
+        
+        .before {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-color: #feb2b2;
+        }
+        
+        .after {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+            border-color: #9ae6b4;
+        }
+        
+        .comparison-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .comparison-card li {
+            padding: 12px 0;
+            font-size: 16px;
+        }
+        
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 3px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 48px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+        
+        .pricing-card.featured {
+            border-color: #764ba2;
+            border-width: 4px;
+            transform: scale(1.05);
+            box-shadow: 0 16px 64px rgba(118, 75, 162, 0.25);
+        }
+        
+        .pricing-tier {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #764ba2;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-amount {
+            font-size: 56px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 16px 0;
+            line-height: 1;
+        }
+        
+        .pricing-period {
+            font-size: 16px;
+            color: #718096;
+            margin-bottom: 32px;
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 12px 8px 12px 0;
+        }
+        
+        /* Action Box */
+        .action-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #ffedd5 100%);
+            border: 3px solid #fbbf24;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .action-box h4 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            margin: 64px 0;
+            border-radius: 2px;
+        }
+        
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+            font-size: 24px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 48px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .section {
+                page-break-inside: avoid;
+                margin: 20px;
+                box-shadow: none;
+            }
+            .scroll-top {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+    <div class="logo-area">
+        <span>MLT DIGITAL</span>
+        <span class="logo-divider">×</span>
+        <span>SEMRUSH</span>
+    </div>
+    
+    <h1>AI Optimization Partnership Strategy</h1>
+    <div class="subtitle">ROI Analysis & Implementation Roadmap</div>
+    
+    <a href="https://hello.chorus.ai/listen?guid=c779d1229ecb4890a12f765873e10063" class="recording-btn" target="_blank">
+        📹 Watch Meeting Recording
+    </a>
+    
+    <div class="date">December 3, 2025</div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section">
+    <h2>Executive Summary</h2>
+    
+    <div class="highlight-box">
+        <p style="font-size: 19px; line-height: 1.8;"><strong>MLT Digital is perfectly positioned to capitalize on the AI search revolution.</strong> With your existing AI optimization services for law firms and Semrush's AIO platform, you can streamline workflows, reduce manual effort by 30%, and unlock significant revenue growth.</p>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">56%</div>
+            <div class="stat-label">Consumers Using GenAI for Recommendations</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">1 in 3</div>
+            <div class="stat-label">UK Users Adopting AI as Primary Search by 2027</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">-80%</div>
+            <div class="stat-label">Expected Drop in Traditional Search by 2026</div>
+        </div>
+    </div>
+    
+    <h3>Your Current Strengths</h3>
+    
+    <ul class="icon-list">
+        <li><strong>Already Offering AI Optimization</strong> – Dedicated service page for law firms with premium pricing</li>
+        <li><strong>Niche Expertise</strong> – Specialized in law firms from small (5-10 lawyers) to enterprise-level</li>
+        <li><strong>Tiered Service Model</strong> – Scalable pricing with multi-location capabilities</li>
+        <li><strong>Performance-Focused Team</strong> – Results-driven approach across SEO and AI optimization</li>
+    </ul>
+    
+    <div class="action-box">
+        <h4>🎯 First-Mover Advantage: 6-12 Months</h4>
+        <p>Only 15-20% of UK law firm websites are currently optimized for AI search. This represents a massive opportunity to capture premium pricing before market saturation.</p>
+    </div>
+</div>
+
+<!-- ROI SECTION -->
+<div class="section">
+    <h2>Your Potential ROI</h2>
+    
+    <div class="roi-hero">
+        <div class="roi-label">Conservative Growth Scenario</div>
+        <div class="roi-number">4.1x</div>
+        <div class="roi-label">Return on Investment • £351,216 Net Return</div>
+    </div>
+    
+    <h3>Scenario 1: Conservative Growth Model</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Revenue Stream</th>
+                <th>Strategy</th>
+                <th>Annual Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Efficiency Gains</strong></td>
+                <td>30% time savings = 7.2 new clients/year</td>
+                <td><strong>£140,400</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Existing Client Upsell</strong></td>
+                <td>20% of 50 clients @ £750/month</td>
+                <td><strong>£90,000</strong></td>
+            </tr>
+            <tr>
+                <td><strong>New Client AI Revenue</strong></td>
+                <td>24 new clients @ £1,500/month</td>
+                <td><strong>£234,000</strong></td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>TOTAL VALUE CREATED</strong></td>
+                <td></td>
+                <td><strong>£464,400</strong></td>
+            </tr>
+            <tr>
+                <td>Semrush Investment</td>
+                <td></td>
+                <td>£113,184</td>
+            </tr>
+            <tr class="table-highlight">
+                <td><strong>NET FINANCIAL RETURN</strong></td>
+                <td></td>
+                <td><strong>£351,216</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="divider"></div>
+    
+    <h3>Scenario 2: Aggressive Growth Model</h3>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">£800K</div>
+            <div class="stat-label">Total Value Created</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">£687K</div>
+            <div class="stat-label">Net Financial Return</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">7.1x</div>
+            <div class="stat-label">ROI Multiple</div>
+        </div>
+    </div>
+</div>
+
+<!-- WORKFLOW TRANSFORMATION -->
+<div class="section">
+    <h2>Workflow Transformation</h2>
+    
+    <h3>1. Streamlined Sales & Prospecting</h3>
+    
+    <div class="comparison">
+        <div class="comparison-card before">
+            <div class="comparison-title" style="color: #c53030;">❌ Before AIO</div>
+            <ul>
+                <li>Manual competitor research</li>
+                <li>Generic outreach emails</li>
+                <li>Hard to prove ROI upfront</li>
+                <li><strong>Time: 2-3 hours per prospect</strong></li>
+            </ul>
+        </div>
+        <div class="comparison-card after">
+            <div class="comparison-title" style="color: #2f855a;">✓ With AIO</div>
+            <ul>
+                <li>Instant reports (2 minutes)</li>
+                <li>Data-driven prospecting</li>
+                <li>Forecasting tools</li>
+                <li><strong>Time: 15 minutes per prospect</strong></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="highlight-box">
+        <h4 style="margin-top: 0; color: #1a1a1a;">🎯 Sales Hook Strategy</h4>
+        <ol style="margin-left: 20px; font-size: 17px; line-height: 1.8;">
+            <li>Generate instant AI visibility report for prospect law firm</li>
+            <li>Export PDF showing visibility gaps vs competitors</li>
+            <li>Send as "complimentary AI visibility audit"</li>
+            <li><strong>Result: 20% conversion rate on demos</strong></li>
+        </ol>
+    </div>
+    
+    <h3>2. Automated Content Workflows</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Your Service</th>
+                <th>AIO Enhancement</th>
+                <th>Time Saved</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Content Optimization</strong></td>
+                <td>Automated prompt-to-page matching<br>AI-specific content scoring</td>
+                <td><strong>70%</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Schema Markup</strong></td>
+                <td>Integrated recommendations<br>Batch processing</td>
+                <td><strong>40%</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Reporting</strong></td>
+                <td>Unified dashboard<br>Automated white-label reports</td>
+                <td><strong>60%</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- MARKET PRICING -->
+<div class="section">
+    <h2>UK Market Pricing</h2>
+    
+    <p style="font-size: 19px; margin: 24px 0;">What other agencies charge for AI optimization services:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Service Level</th>
+                <th>Monthly Fee</th>
+                <th>What's Included</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AI Audit Only</td>
+                <td><strong>£500-£750</strong></td>
+                <td>One-time visibility report</td>
+            </tr>
+            <tr>
+                <td>AI Monitoring</td>
+                <td><strong>£1,000-£1,500</strong></td>
+                <td>Monthly tracking & recommendations</td>
+            </tr>
+            <tr>
+                <td>AI Optimization Standard</td>
+                <td><strong>£2,000-£3,500</strong></td>
+                <td>Content optimization + schema</td>
+            </tr>
+            <tr>
+                <td>AI Optimization Premium</td>
+                <td><strong>£5,000-£8,000</strong></td>
+                <td>Full-service + PR outreach</td>
+            </tr>
+            <tr class="table-highlight">
+                <td>Enterprise Law Firms</td>
+                <td><strong>£10,000-£20,000+</strong></td>
+                <td>Multi-location + reputation mgmt</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="divider"></div>
+    
+    <h3>Recommended Pricing for MLT Digital</h3>
+    
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <div class="pricing-tier">Essential</div>
+            <div class="pricing-amount">£2,000</div>
+            <div class="pricing-period">per month</div>
+            <p style="text-align: left; color: #666; font-size: 16px;">
+                <strong>Small Firms</strong><br>
+                SEO basics + AI monitoring<br>
+                Quarterly strategy reports
+            </p>
+        </div>
+        <div class="pricing-card featured">
+            <div class="pricing-tier">Professional</div>
+            <div class="pricing-amount">£4,000</div>
+            <div class="pricing-period">per month</div>
+            <p style="text-align: left; color: #666; font-size: 16px;">
+                <strong>Mid-Size Firms</strong><br>
+                Full AI optimization<br>
+                Content strategy + monthly reports
+            </p>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-amount">£8-15K</div>
+            <div class="pricing-period">per month</div>
+            <p style="text-align: left; color: #666; font-size: 16px;">
+                <strong>Large Firms</strong><br>
+                Multi-location tracking<br>
+                Reputation management
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDY -->
+<div class="section">
+    <h2>Success Story: BlueGlass</h2>
+    
+    <div class="highlight-box">
+        <h3 style="margin-top: 0; color: #1a1a1a;">Similar Profile to MLT Digital</h3>
+        <p style="font-size: 17px; margin: 16px 0;">Performance-focused digital agency that needed to balance retention with growth while maximizing ROI amid AI disruption.</p>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">+30%</div>
+            <div class="stat-label">Operational Efficiency Improvement</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">+10%</div>
+            <div class="stat-label">Overall Project ROI Increase</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Seamless Data Transition</div>
+        </div>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%); padding: 48px; border-radius: 16px; margin: 48px 0; border-left: 6px solid #764ba2;">
+        <p style="font-size: 20px; font-style: italic; line-height: 1.9; margin: 0; color: #1a1a1a;">
+            "Semrush Enterprise stood out for its comprehensive features, which seamlessly integrate keyword tracking, competitor analysis, technical SEO audits, and content optimization into one solution."
+        </p>
+        <p style="margin-top: 32px; font-weight: 700; color: #764ba2; font-size: 18px;">— Fabian Pfluger, SEO Consultant, BlueGlass</p>
+    </div>
+</div>
+
+<!-- IMPLEMENTATION -->
+<div class="section">
+    <h2>Implementation Roadmap</h2>
+    
+    <h3>Phase 1: Quick Wins (Weeks 1-2)</h3>
+    <span class="badge">Demonstrate Immediate Value</span>
+    
+    <ul class="icon-list">
+        <li><strong>Team Training:</strong> 2-hour session on platform navigation and content optimization</li>
+        <li><strong>Sales Assets:</strong> Build 3-5 prospect visibility reports and email templates</li>
+        <li><strong>Test with 3 Clients:</strong> Small, mid, and large law firm pilots</li>
+    </ul>
+    
+    <div class="action-box">
+        <h4>Expected Outcome</h4>
+        <p>1-2 upsell conversions, refined pitch approach, team confidence established</p>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <h3>Phase 2: Systematic Rollout (Weeks 3-6)</h3>
+    <span class="badge">Scale to Client Base</span>
+    
+    <ul class="icon-list">
+        <li><strong>Existing Client Campaign:</strong> Send reports to all 50 clients, schedule 15-20 demos</li>
+        <li><strong>Prospect Pipeline:</strong> Target 20-30 law firms with data-driven outreach</li>
+        <li><strong>Workflow Integration:</strong> Migrate all content optimization to AIO platform</li>
+    </ul>
+    
+    <div class="action-box">
+        <h4>Expected Outcome</h4>
+        <p>8-10 existing client upsells, 3-5 new client wins, 30% time savings realized</p>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <h3>Phase 3: Advanced Optimization (Weeks 7-12)</h3>
+    <span class="badge">Maximize Platform Value</span>
+    
+    <ul class="icon-list">
+        <li><strong>Brand Perception Services:</strong> Launch reputation management for larger firms</li>
+        <li><strong>Forecasting & Planning:</strong> Strategic client sessions with traffic projections</li>
+        <li><strong>Premium Tier:</strong> Enterprise offerings at £10k+/month</li>
+    </ul>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+    <h2>Next Steps</h2>
+    
+    <h3>Immediate Actions (This Week)</h3>
+    
+    <div class="action-box">
+        <h4>1. 📅 Schedule Deep-Dive Training</h4>
+        <p style="margin: 12px 0;"><strong>90-minute session covering:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Content optimization workflows with live demos</li>
+            <li>Brand perception analysis for law firms</li>
+            <li>Client presentation tools and reporting</li>
+        </ul>
+    </div>
+    
+    <div class="action-box">
+        <h4>2. 📊 Review ROI Calculations</h4>
+        <ul style="margin-left: 20px;">
+            <li>Validate assumptions with your actual client data</li>
+            <li>Adjust pricing scenarios for your market</li>
+            <li>Identify 3-5 ideal Phase 1 test clients</li>
+        </ul>
+    </div>
+    
+    <div class="action-box">
+        <h4>3. 💼 Define Pricing Strategy</h4>
+        <ul style="margin-left: 20px;">
+            <li>Choose separate, bundled, or tiered approach</li>
+            <li>Develop law firm-specific proposal templates</li>
+            <li>Create service comparison sheets</li>
+        </ul>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <h3>Your Dedicated Support</h3>
+    
+    <div class="highlight-box">
+        <p style="font-size: 19px; margin-bottom: 20px;"><strong>Nastia Smoroda</strong><br>Head of SEO, Agency Partnerships • Semrush Enterprise</p>
+        
+        <ul class="icon-list">
+            <li>Ongoing training for your team (unlimited sessions)</li>
+            <li>Sales asset creation assistance</li>
+            <li>Client pitch support and demo attendance</li>
+            <li>Quarterly strategy reviews</li>
+            <li>Access to agency community best practices</li>
+        </ul>
+    </div>
+</div>
+
+<!-- FINAL SECTION -->
+<div class="section" style="text-align: center; padding: 100px 80px;">
+    <h2 style="font-size: 64px; margin-bottom: 32px;">Let's Future-Proof Your Agency</h2>
+    
+    <p style="font-size: 24px; color: #666; margin-bottom: 60px;">The AI search revolution is happening now.<br>Your clients need this. You're positioned to deliver it.</p>
+    
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px; border-radius: 24px; margin: 60px 0;">
+        <p style="font-size: 22px; margin-bottom: 24px; opacity: 0.95;">Ready to get started?</p>
+        <p style="font-size: 36px; font-weight: 700; margin: 0;">Let's schedule your deep-dive training</p>
+    </div>
+    
+    <p style="color: #888; margin-top: 80px; font-size: 15px;">This document is confidential and intended for MLT Digital internal use only.</p>
+    <p style="color: #888; margin-top: 12px; font-size: 15px;">Document Version 1.0 • December 3, 2025</p>
+</div>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑
+</div>
+
+</body>
+</html>
